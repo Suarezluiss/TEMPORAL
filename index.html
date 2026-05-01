@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Consistencia Temporal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <canvas id="particles"></canvas>
+
+    <!-- INICIO -->
+    <div id="inicio" class="pantalla">
+        <h1 class="titulo">Feed Temporal</h1>
+        <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+        <button onclick="iniciarJuego()">Jugar</button>
+    </div>
+
+    <!-- JUEGO -->
+    <div id="juego" class="oculto">
+
+        <div class="top-bar">
+            <div>⏱ <span id="tiempo">30</span></div>
+            <div>⭐ <span id="puntos">0</span></div>
+        </div>
+
+        <h2 id="nivel"></h2>
+
+        <div id="feed" class="feed"></div>
+
+        <button onclick="verificar()">Verificar</button>
+
+    </div>
+
+    <!-- FINAL -->
+    <div id="fin" class="pantalla oculto">
+        <h1>Resultado</h1>
+        <p id="finalTexto"></p>
+        <button onclick="reiniciar()">Volver a jugar</button>
+    </div>
+
+    <!-- SONIDOS -->
+    <audio id="ok" src="https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3"></audio>
+    <audio id="fail" src="https://assets.mixkit.co/sfx/preview/mixkit-wrong-answer-fail-notification-946.mp3"></audio>
+    <audio id="move" src="https://assets.mixkit.co/sfx/preview/mixkit-click-ui-1119.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
